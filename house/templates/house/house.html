@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title%}Create account{%endblock%}
+{%load crispy_forms_tags%}
+
+{% block content %}
+    <form method="POST" class="form-group">
+        {%csrf_token%}
+        {{ form|crispy }}
+       <button type="submit" class="btn btn-success">register
+
+       </button>
+    </form>
+
+    <style>
+        body{
+          background-image:url("/static/images/");
+          background-repeat: no-repeat;
+          background-size: cover;
+          image-resolution: 300pt;
+        
+          
+        }
+      </style>    
+{%endblock%}
